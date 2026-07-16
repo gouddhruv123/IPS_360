@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lime">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPS 360° — Teacher Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-mark"><span class="dot"></span> IPS 360°</div>
+</div>
+
+<div class="auth-shell">
+  <div class="auth-card reveal in">
+    <div class="eyebrow"><span class="sam">समाधानम्</span> Faculty Access</div>
+    <h1>Teacher login</h1>
+    <p class="sub">See your feedback trend, class risk flags, and the HOD dashboard.</p>
+
+    <!-- Visual-only for now — wire this up to your auth backend -->
+    <form id="teacher-login-form">
+      <div class="auth-field">
+        <label for="t-email">College email</label>
+        <input id="t-email" type="email" placeholder="you@ipsacademy.edu" required>
+      </div>
+      <div class="auth-field">
+        <label for="t-password">Password</label>
+        <input id="t-password" type="password" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="auth-submit">Log in</button>
+    </form>
+
+    <a href="{{ url_for('landing_page') }}" class="auth-back">← Back to student side</a>
+  </div>
+</div>
+
+<button class="theme-toggle" aria-label="Switch theme" style="position:fixed; bottom:24px; right:24px;"><span class="knob"></span></button>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
