@@ -26,6 +26,9 @@ def student_login():
 def dashboard():
     return render_template("dashboard.html")
 
+@app.route('login/teacher/dashboard')
+def dashboard():
+    return render_template("teacher_dashboard.html")
 
 
 if __name__ == "__main__":
