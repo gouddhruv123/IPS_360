@@ -14,5 +14,19 @@ def landing_page():
 def teacher_page():
     return render_template("prof_page.html")
 
+@app.route('/login/prof')
+def teacher_login():
+    return render_template("login_page_teacher.html")
+
+@app.route('login/student')
+def student_login():
+    return render_template("login_page_student.html")
+
+@app.route('login/student/dashboard')
+def dashboard():
+    return render_template("dashboard.html")
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
