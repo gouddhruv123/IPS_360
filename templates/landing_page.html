@@ -39,22 +39,35 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow"><span class="sam">समाधानम्</span> Hackathon 2026 · Team APX GP</div>
-    <h1 id="hero-headline"></h1>
-    <p class="hero-sub reveal">IPS 360° flags academic risk before results day, scores placement-readiness in real time, and gives teachers safe, anonymous feedback to grow from — one platform for the whole IPS Academy ecosystem, not just one side of it.</p>
+    <!-- NEW: centered hero block, matching the reference layout -->
+    <div class="hero-center">
+      <div class="eyebrow reveal"><span class="sam">समाधानम्</span> Hackathon 2026 · Team APX GP</div>
+      <h1 id="hero-headline"></h1>
+      <p class="hero-sub reveal">IPS 360° flags academic risk before results day, scores placement-readiness in real time, and gives teachers safe, anonymous feedback to grow from — one platform for the whole IPS Academy ecosystem, not just one side of it.</p>
 
-    <!-- Email login option, right in the landing section -->
-    <div class="hero-login reveal">
-      <div class="hero-login-label">Student login</div>
-      <form class="login-bar" id="hero-login-form">
-        <input type="email" placeholder="you@ips.edu" required>
-        <button type="submit" aria-label="Log in">→</button>
-      </form>
+      <!-- NEW: email + "Get started" pill, same row shape as the reference screenshot -->
+      <div class="hero-cta-row reveal">
+        <form class="login-bar wide" id="hero-login-form">
+          <input type="email" placeholder="you@ips.edu" required>
+          <button type="submit">Get started →</button>
+        </form>
+      </div>
+
+      <div class="hero-actions reveal">
+        <a href="#engines" class="btn-solid">Explore the two engines →</a>
+        <a href="#problem" class="btn-ghost">Why this problem</a>
+      </div>
     </div>
 
-    <div class="hero-actions reveal">
-      <a href="#engines" class="btn-solid">Explore the two engines →</a>
-      <a href="#problem" class="btn-ghost">Why this problem</a>
+    <!-- NEW: abstract glow panel — the reference's "glowing light" moment, without copying its branded mascots -->
+    <div class="hero-glow reveal" aria-hidden="true">
+      <span class="orb a"></span>
+      <span class="orb b"></span>
+      <span class="spark" style="top:22%; left:18%;"></span>
+      <span class="spark" style="top:34%; left:78%;"></span>
+      <span class="spark" style="top:60%; left:46%;"></span>
+      <span class="spark" style="top:16%; left:60%;"></span>
+      <span class="spark" style="top:70%; left:12%;"></span>
     </div>
 
     <div class="dash reveal">

@@ -186,16 +186,47 @@ nav{
   font-size:17px; line-height:1.55; color:var(--text-soft); opacity:0.75;
 }
 
-/* Email login option on the landing section itself */
-.hero-login{
-  margin-top:30px; max-width:420px;
-}
-.hero-login-label{ font-size:12.5px; font-weight:600; color:var(--text-muted); margin-bottom:10px; }
-.hero-login .login-bar{
+/* NEW: centered hero wrapper (eyebrow / h1 / sub / cta-row / actions),
+   scoped so it doesn't affect the dashboard mock below it */
+.hero-center{ max-width:760px; margin:0 auto; text-align:center; }
+.hero-center .eyebrow{ margin-left:auto; margin-right:auto; }
+.hero-center h1{ margin-left:auto; margin-right:auto; min-height:auto; }
+.hero-center .hero-sub{ margin-left:auto; margin-right:auto; }
+.hero-center .hero-actions{ justify-content:center; }
+
+/* NEW: email + "Get started" row, centered under the headline like the reference */
+.hero-cta-row{ display:flex; justify-content:center; margin-top:30px; }
+.hero-cta-row .login-bar{
   background:var(--surface); border:1px solid var(--border); padding:6px 6px 6px 20px;
 }
-.hero-login .login-bar input{ color:var(--text); width:100%; }
-.hero-login .login-bar input::placeholder{ color: color-mix(in srgb, var(--text) 40%, transparent); }
+.hero-cta-row .login-bar input{ color:var(--text); width:220px; }
+.hero-cta-row .login-bar input::placeholder{ color: color-mix(in srgb, var(--text) 40%, transparent); }
+.login-bar.wide button{
+  width:auto; border-radius:999px; padding:0 20px; height:38px;
+  font-size:13.5px; font-weight:700; white-space:nowrap;
+}
+
+/* NEW: abstract glowing-orb panel — the reference's signature light, built from
+   plain CSS blurred circles (no branded characters/mascots reproduced) */
+.hero-glow{
+  position:relative; height:170px; margin-top:44px;
+  border-radius:var(--radius-xl); overflow:hidden;
+  background:
+    radial-gradient(circle at 32% 115%, color-mix(in srgb, var(--accent) 40%, transparent), transparent 60%),
+    radial-gradient(circle at 68% 115%, color-mix(in srgb, var(--accent-deep) 40%, transparent), transparent 60%),
+    var(--surface-2);
+}
+.hero-glow .orb{
+  position:absolute; bottom:-36px; border-radius:50%; filter:blur(1px);
+  animation: orbFloat 6s ease-in-out infinite;
+}
+.hero-glow .orb.a{ left:30%; width:86px; height:86px; background:var(--accent); box-shadow:0 0 70px 22px color-mix(in srgb, var(--accent) 45%, transparent); }
+.hero-glow .orb.b{ left:58%; width:64px; height:64px; background:var(--accent-deep); box-shadow:0 0 60px 18px color-mix(in srgb, var(--accent-deep) 45%, transparent); animation-delay:.9s; }
+@keyframes orbFloat{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-14px); } }
+.hero-glow .spark{
+  position:absolute; width:3px; height:3px; border-radius:50%;
+  background: color-mix(in srgb, var(--text-invert) 80%, transparent);
+}
 
 .hero-actions{ display:flex; gap:14px; margin-top:22px; flex-wrap:wrap; }
 .btn-solid{
